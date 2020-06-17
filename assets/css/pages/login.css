@@ -1,0 +1,245 @@
+@media only screen and (max-width:350px)
+{
+    #kiri{
+        display: none;
+    }
+
+    #username {
+        padding: 10px;
+        margin-bottom: 25px;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        color: #A9A9A9;
+        font-family: 'gurajada';
+        border-radius: 50px;
+        box-shadow: 1px 4px 4px #00000047;
+    }
+
+    #userID {
+        padding: 10px;
+        margin-bottom: 25px;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        color: #A9A9A9;
+        font-family: 'gurajada';
+        border-radius: 50px;
+        box-shadow: 1px 4px 4px #00000047;
+    }
+
+    .vertikal-center{
+        transform: translateY(0%);
+    }
+
+    #samping{
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-top-mobile {
+        padding: 0;
+        margin: 0;
+        background-image: url(../../img/Vector-flip.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
+
+    small{
+        display: inherit;
+    }
+
+    .nav-span {
+        font-family: 'gurajada';
+        font-size: 50px;
+        float: left;
+        margin-left: 2rem;
+        color: white;
+    }
+}
+
+@media only screen and (max-width:767px)
+{
+    #kiri{
+        display: none;
+    }
+
+    #username {
+        padding: 10px;
+        margin-bottom: 25px;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        color: #A9A9A9;
+        font-family: 'gurajada';
+        border-radius: 50px;
+        box-shadow: 1px 4px 4px #00000047;
+    }
+
+    #userID {
+        padding: 10px;
+        margin-bottom: 25px;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        color: #A9A9A9;
+        font-family: 'gurajada';
+        border-radius: 50px;
+        box-shadow: 1px 4px 4px #00000047;
+    }
+
+    .vertikal-center{
+        transform: translateY(0%);
+    }
+
+    #samping{
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-top-mobile {
+        padding: 0;
+        margin: 0;
+        background-image: url(../../img/Vector-flip.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .nav-span {
+        font-family: 'gurajada';
+        font-size: 50px;
+        float: left;
+        margin-left: 2rem;
+        color: white;
+    }
+}
+@media only screen and (min-width:768px)
+{
+    #kiri{
+        display: none;
+    }
+
+    #username {
+        padding: 10px;
+        margin-bottom: 25px;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        color: #A9A9A9;
+        font-family: 'gurajada';
+        border-radius: 50px;
+        box-shadow: 1px 4px 4px #00000047;
+    }
+
+    #userID {
+        padding: 10px;
+        margin-bottom: 25px;
+        border: none;
+        font-size: 25px;
+        text-align: center;
+        color: #A9A9A9;
+        font-family: 'gurajada';
+        border-radius: 50px;
+        box-shadow: 1px 4px 4px #00000047;
+    }
+
+    .vertikal-center{
+        transform: translateY(0%);
+    }
+
+    #samping{
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-top-mobile {
+        padding: 0;
+        margin: 0;
+        background-image: url(../../img/Vector-flip.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 250%;
+    }
+
+    .nav-span {
+        font-family: 'gurajada';
+        font-size: 65px;
+        float: left;
+        margin-left: 2rem;
+        color: white;
+    }
+}
+
+@media only screen and (min-width:1024px)
+{
+
+    .header-logo{
+        font-family: 'gurajada';
+        color: #A9A9A9;
+    }
+
+    .subheader-logo{
+        font-family: 'gurajada';
+        color: #A9A9A9;
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    #kiri{
+        display: block;
+    }
+
+    small{
+        display: block!important;
+        color: white!important;
+    }
+
+
+   #nav-top-mobile{
+       display: none;
+   }
+
+   #samping{
+       background-color: #FF725E;
+   }
+
+   .vertikal-center{
+        margin-top: 100%;
+        transform: translateY(-248%);
+    }
+
+    img{
+        transform: translateY(11%);
+        width: 70%;
+        margin-left: 5rem;
+    }
+
+    .header-logo.text-center {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    .subheader-logo{
+        font-size: 100px;
+        position: absolute;
+        z-index: 9999;
+        font-family: 'gurajada';
+        color: #A9A9A9;
+        left: 12rem;
+        top: 52px;
+    }
+
+}
+
+
+
+@font-face{
+    font-family: 'gurajada';
+    src:url('../../fonts/gurajada/Gurajada-Regular.ttf');
+}
