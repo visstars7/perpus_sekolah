@@ -16,4 +16,17 @@
             }
 
         }
+
+        public function detailSurat($idSurat)
+        {
+
+            return $this->db->get_where('vw_surat_perintah',['id_surat' => $idSurat])->row();
+
+        }
+
+        public function deleteSurat($idSurat)
+        {
+            $this->db->where('id_surat',$idSurat);
+            $this->db->delete('tb_surat_perintah');
+        }
     }

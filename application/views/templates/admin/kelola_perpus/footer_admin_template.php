@@ -54,6 +54,16 @@
   <!-- Page level plugins -->
   <script src="<?=base_url('assets/templates/vendor/chart.js/Chart.min.js')?>"></script>
 
+  <!-- Datatable js -->
+  
+  <script type="text/javascript" charset="utf8" src="<?=base_url('assets/DataTables/datatables.js')?>"></script>
+
+  <script>
+
+    $("#suratMasuk").DataTable();
+
+  </script>
+
   <!-- Page level custom scripts -->
   <!-- <script src="<?=base_url('assets/templates/js/demo/chart-area-demo.js')?>"></script>
   <script src="<?=base_url('assets/templates/js/demo/chart-pie-demo.js')?>"></script> -->
