@@ -49,7 +49,7 @@
                         ];
 
                         $this->session->set_userdata('user',$petugas);
-                        redirect(base_url('admin/Dashboard'));
+                        redirect(base_url('Dashboard'));
                         break;
 
                     // ke halaman Anggota
@@ -64,7 +64,7 @@
                         ];
                         
                         $this->session->set_userdata('user',$anggota);
-                        redirect(base_url('user/Dashboard'));
+                        redirect(base_url('Dashboard'));
                         break;
 
                     // selain itu maka kembalikan ke login

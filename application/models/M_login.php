@@ -5,10 +5,10 @@
         public function getRow($username,$userID)
         {
             $row  = $this->db->get_where("tb_petugas_perpus",
-            ['nama_petugas' => $username,'id_petugas'  => $userID]);
+            ['nama_petugas' => $username,'id_petugas'  => $userID,'status_petugas' => 1]);
 
             $rows = $this->db->get_where("tb_anggota_perpus"
-            ,['nama_anggota' => $username,'id_pengguna'=> $userID]);
+            ,['nama_anggota' => $username,'id_pengguna'=> $userID,'status' => 1]);
 
             if($row->num_rows() > 0)
             {

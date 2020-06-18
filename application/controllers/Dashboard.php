@@ -18,6 +18,8 @@
                 redirect(base_url('Login'));
             }
 
+            $this->load->model('M_kelola');
+
         }
 
         public function index()
@@ -39,9 +41,10 @@
             }
             elseif($_SESSION['user']['id_role'] == '5')
             {
+                $data['surat'] = $this->M_kelola->persuratan();
                 $this->load->view('templates/admin/kelola_perpus/header_admin_template');
-                $this->load->view('templates/admin/kelola_perpus/sidebar_admin_template');
-                $this->load->view('pages/admin_pages/v_dashboard');
+                $this->load->view('templates/admin/kelola_perpus/sidebar_admin_template',$data);
+                $this->load->view('pages/admin_pages/v_surat_kelola',$data);
                 $this->load->view('templates/admin/kelola_perpus/footer_admin_template');
             }
             elseif($_SESSION['user']['id_role'] == '6')
@@ -52,7 +55,9 @@
                 $this->load->view('templates/admin/keuangan_perpus/footer_admin_template');
             }
             else{
-                redirect(base_url('user/Dashboard'));
+                $this->load->view('templates/user/header_user_template');
+                $this->load->view('pages/user_pages/v_dashboard');
+                $this->load->view('templates/user/footer_user_template');
             }
         }
 
