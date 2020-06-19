@@ -39,9 +39,19 @@
                 $this->load->view('pages/admin_pages/v_dashboard');
                 $this->load->view('templates/admin/admin_perpus/footer_admin_template');
             }
+            // role pengelola
             elseif($_SESSION['user']['id_role'] == '5')
             {
+                // pagination
+                $jumlahRow              = $this->M_kelola->totalRows("tb_surat_perintah");
+                $config['base_url']      = base_url('Dashboard/index');
+                $config['total_rows']   = $jumlahRow;
+                $config['per_page']     = 4;
+                $this->pagination->initialize($config);
+
+                $from          = $this->uri->segment(3);
                 $data['surat'] = $this->M_kelola->persuratan();
+                $data['page']  = $this->M_kelola->paginationGet("tb_rak",$config['per_page'],$from); 
                 $this->load->view('templates/admin/kelola_perpus/header_admin_template');
                 $this->load->view('templates/admin/kelola_perpus/sidebar_admin_template',$data);
                 $this->load->view('pages/admin_pages/v_surat_kelola',$data);

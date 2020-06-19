@@ -42,11 +42,58 @@
         </a>
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Komponen</h6>
-            <a class="collapse-item" href="buttons.html">Tambah Buku</a>
+            <h6 class="collapse-header">Buku</h6>
             <a class="collapse-item" href="cards.html">Daftar Buku</a>
             <a class="collapse-item" href="cards.html">Daftar Buku dipinjam</a>
             <a class="collapse-item" href="cards.html">Daftar Buku kembali</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+          <i class="fas fa-book"></i>
+          <span>Kelola Kategori</span>
+        </a>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Kategori</h6>
+            <a class="collapse-item" href="cards.html">Kategori</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+          <i class="fas fa-book"></i>
+          <span>Kelola Kurikulum</span>
+        </a>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Kurikulum Buku</h6>
+            <a class="collapse-item" href="cards.html">Kurikulum</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          <i class="fas fa-user"></i>
+          <span>Kelola Penerbit</span>
+        </a>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Penerbit</h6>
+            <a class="collapse-item" href="cards.html">Penerbit</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+          <i class="fas fa-book"></i>
+          <span>Kelola Genre</span>
+        </a>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Genre Buku</h6>
+            <a class="collapse-item" href="cards.html">Genre</a>
           </div>
         </div>
       </li>
@@ -58,9 +105,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Komponen</h6>
-            <a class="collapse-item" href="buttons.html">Tambah Rak</a>
-            <a class="collapse-item" href="cards.html">Tambah Baris Rak</a>
-            <a class="collapse-item" href="cards.html">Daftar Rak</a>
+            <a class="collapse-item" href="<?=base_url('daftar-rak')?>">Daftar Rak</a>
             <a class="collapse-item" href="cards.html">Daftar Baris Rak</a>
           </div>
         </div>

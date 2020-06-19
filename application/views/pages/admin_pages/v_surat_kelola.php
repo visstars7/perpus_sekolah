@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <?php if($surat): ?>
     <div class="table-responsive">
-        <table id="suratMasuk" class="table table-bordered table-stripped table-hover">
+        <table id="dataTable" class="table table-bordered table-stripped table-hover">
             <thead>   
                 <tr>
                     <th>NO</th>
@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <?php
-            $no = 1;
+            $no = $this->uri->segment(3)+1;
             foreach($surat AS $row): ?>
             <?php 
                 $status = $row->status_surat_perintah ? "valid": "tidak valid"; 
@@ -34,6 +34,9 @@
             </tbody>
             <?php endforeach; ?>
         </table>
+        <div class="pagination">
+            <?= $this->pagination->create_links(); ?>
+        </div>
     </div>
     <?php else: ?>
         <div class="text-center">

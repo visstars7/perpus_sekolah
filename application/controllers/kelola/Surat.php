@@ -26,7 +26,7 @@
 
         public function hapus($idSurat)
         {
-            $this->M_kelola->deleteSurat($idSurat);
+            $this->M_kelola->delete("tb_surat_perintah","id_surat",$idSurat);
             redirect(base_url('Dashboard'));
         }
     }

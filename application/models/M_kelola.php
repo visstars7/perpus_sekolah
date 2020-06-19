@@ -2,6 +2,8 @@
 
     class M_kelola extends CI_Model
     {
+
+        // read surat
         public function persuratan()
         {
             $surat = $this->db->count_all('vw_surat_perintah');
@@ -17,6 +19,7 @@
 
         }
 
+        // detail surat
         public function detailSurat($idSurat)
         {
 
@@ -24,9 +27,48 @@
 
         }
 
-        public function deleteSurat($idSurat)
+        // delete
+        public function delete($table,$key,$id)
         {
-            $this->db->where('id_surat',$idSurat);
-            $this->db->delete('tb_surat_perintah');
+            $this->db->where($key,$id);
+            $this->db->delete($table);
         }
+
+        // menambah data Rak
+        public function insert($table,$data)
+        {
+            $this->db->insert($table,$data);
+        }
+
+        // update
+        public function update($table,$data,$id)
+        {
+            $this->db->where('id_rak',$id);
+            $this->db->update($table,$data);
+        }
+
+        // mengambil data semua
+        public function getData($table)
+        {
+            return $this->db->get($table)->result();
+        }
+
+        // mengambil data rak berdasar id
+        public function getWhere($table,$key,$id)
+        {
+            return $this->db->get_where("$table",["$key"=>$id])->result();
+        }
+
+        // total rows
+        public function totalRows($table)
+        {
+            return $this->db->get($table)->num_rows();
+        }
+
+        // pagination data
+        public function paginationGet($table,$number,$offset)
+        {
+            return $this->db->get($table,$number,$offset)->result();
+        }
+
     }

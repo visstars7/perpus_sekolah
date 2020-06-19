@@ -53,3 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 $route['detail-surat/(:any)'] = "kelola/Surat/detail_surat/$1";
+$route['tambah-rak']        = "kelola/Rak/template_tambah";
+$route['daftar-rak']        = "kelola/Rak/index";
+$route['pages-rak/(:any)']  = "kelola/Rak/index/$1";  
+$route['update-rak/(:any)'] = "kelola/Rak/template_update_rak/$1";

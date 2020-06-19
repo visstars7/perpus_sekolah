@@ -60,7 +60,9 @@
 
   <script>
 
-    $("#suratMasuk").DataTable();
+    // $(document).ready(function() {
+	  //   $('#dataTable').DataTable();
+	  // });
 
   </script>
 
