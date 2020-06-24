@@ -41,9 +41,9 @@
         }
 
         // update
-        public function update($table,$data,$id)
+        public function update($table,$column,$data,$id)
         {
-            $this->db->where('id_rak',$id);
+            $this->db->where($column,$id);
             $this->db->update($table,$data);
         }
 
@@ -53,16 +53,34 @@
             return $this->db->get($table)->result();
         }
 
-        // mengambil data rak berdasar id
-        public function getWhere($table,$key,$id)
+        // mengambil data  berdasar id
+        public function getWhere($table,$column,$value)
         {
-            return $this->db->get_where("$table",["$key"=>$id])->result();
+            return $this->db->get_where("$table",["$column"=>$value])->result();
+        }
+
+        // get Where Menggunakan Row
+        public function getWhereRow($table,$column,$value)
+        {
+            return $this->db->get_where($table,["$column"=>$value])->row();
+        }
+
+        // get Data menggunakan Row
+        public function getDataRow($table)
+        {
+            return $this->db->get($table)->row();
         }
 
         // total rows
         public function totalRows($table)
         {
             return $this->db->get($table)->num_rows();
+        }
+
+        // total rows where
+        public function totalRowsWhere($table,$column,$value)
+        {
+            return $this->db->get_where("$table",["$column"=>"$value"])->num_rows();
         }
 
         // pagination data

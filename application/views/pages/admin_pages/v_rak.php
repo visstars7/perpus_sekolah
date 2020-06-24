@@ -1,6 +1,16 @@
 <div class="container-fluid">
-    <a class="btn btn-primary mb-3 btn-sm" href="<?=base_url('tambah-rak')?>">Tambah Rak</a>
+    <div class="form-inline">
+        <a class="btn btn-primary mb-3 btn-sm" href="<?=base_url('tambah-rak')?>"><i class="fa fa-plus"> Tambah Rak</i></a>
+        <button type="button" class="btn btn-info mb-3 btn-sm ml-5">
+            Jumlah Rak <span class="badge badge-light"><?= $jml_rak ?></span>
+            <span class="sr-only">unread messages</span>
+        </button>
+    </div>
+    <!-- alert -->
+    <?= $this->session->userdata('pesan')?>
+    <!-- alert -->
     <div class="table-responsive">
+        <?php if(!empty($rak)): ?>
         <table id="dataTable" class="table table-bordered table-hover">
             <tr>
                 <th>NO</th>
@@ -30,6 +40,9 @@
                 </tr>
             <?php endforeach; ?>
         </table>
+            <?php else: ?>
+                <h3 class="text-center"><strong>Maaf data tidak ditemukan</strong></h3>
+            <?php endif; ?>
         <div>
             <?= $this->pagination->create_links(); ?>
         </div>

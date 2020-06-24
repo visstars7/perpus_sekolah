@@ -49,11 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller']    = 'welcome';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = TRUE;
-$route['detail-surat/(:any)'] = "kelola/Surat/detail_surat/$1";
-$route['tambah-rak']        = "kelola/Rak/template_tambah";
-$route['daftar-rak']        = "kelola/Rak/index";
-$route['pages-rak/(:any)']  = "kelola/Rak/index/$1";  
-$route['update-rak/(:any)'] = "kelola/Rak/template_update_rak/$1";
+$route['translate_uri_dashes']  = TRUE;
+$route['detail-surat/(:any)']   = "kelola/Surat/detail_surat/$1";
+$route['tambah-rak']            = "kelola/Rak/template_tambah";
+$route['daftar-rak']            = "kelola/Rak/index";
+$route['pages-rak/(:any)']      = "kelola/Rak/index/$1";
+$route['baris-rak']             = "kelola/Rak/template_baris_rak";
+$route['update-rak/(:any)']     = "kelola/Rak/template_update_rak/$1";
+$route['update-baris/(:any)']   = "kelola/Rak/template_update_baris/$1";

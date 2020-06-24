@@ -11,17 +11,19 @@
                         <input class="form-control w-50" type='text' value="<?=$row->id_rak?>" name='nama_rak' id='rak' placeholder='Nama rak buku' readonly>
                     </div>
                     <div class="form-group">
-                        <label for='rak'>Status Buku</label>
+                        <label for='rak'>Status Rak Buku</label>
                         <select class="custom-select" name="status" id="status">
                             <option id="opsi" value="1"<?=$row->status?'selected':false?>>Aktif</option>
                             <option id="opsi" value="0"<?=$row->status?false:'selected'?>>Tidak Aktif</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <button class="btn btn-success" type="submit">Ubah</button>
-                    </div>
-                    <div class="form-group mt-5">
-                        <a class="btn btn-primary" href="<?=base_url('daftar-rak')?>">Kembali</a>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <button class="btn btn-success" type="submit">Ubah</button>
+                        </div>
+                        <div class="form-group ml-3">
+                            <a class="btn btn-primary" href="<?=base_url('daftar-rak')?>">Kembali</a>
+                        </div>
                     </div>
                 <?= form_close(); ?>
             <?php endforeach; ?>

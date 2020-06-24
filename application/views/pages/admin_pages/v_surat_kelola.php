@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <?php if($surat): ?>
+    <?php if(!empty($surat)): ?>
     <div class="table-responsive">
         <table id="dataTable" class="table table-bordered table-stripped table-hover">
             <thead>   
@@ -29,7 +29,7 @@
                 <td><?= $row->tujuan; ?></td>
                 <td><?= $status ?></td>
                 <td><a class="btn btn-success btn-sm" href="<?=base_url('detail-surat/'.$row->id_surat)?>" target="__BLANK"><i class="fa fa-search-plus"></i></a></td>
-                <td><a class="btn btn-danger btn-sm" href="<?=base_url('kelola/Surat/hapus/'.$row->id_surat)?>"><i class="fa fa-trash"></i></a></td>
+                <td><a onclick="return confirm('cek dulu sebelum di hapus');" class="btn btn-danger btn-sm" href="<?=base_url('kelola/Surat/hapus/'.$row->id_surat)?>"><i class="fa fa-trash"></i></a></td>
             </tr>
             </tbody>
             <?php endforeach; ?>
